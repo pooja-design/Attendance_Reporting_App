@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <title>Attendance</title>
+    <link rel="stylesheet" href="css/teachers_view.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .Chart{
+            height:fit-content;
+            width:450px;
+            background-color:black;
+        }
+    </style>
+    <title>View</title>
+</head>
+<body>
+    {{>navbar}}
+    <center><h1 style="font-size: 50px;">Attendance Report  </h1>
+    <h2 style="color: rgb(113, 175, 32);"><b>Attendance matters, Each Day, Every Day!</h2>
+       <h3 style="color:beige">{{name}} Teacher, Namaste!</h3>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='teachers_view.hbs'">All Students Attendance</button>
+       <button type="button" class="btn btn-secondary" onclick="window.location.href='teachers_view2.hbs'">Students Whose Attendance Less than 75%</button>
+       <button type="button" class="btn btn-success" onclick="window.location.href='teachers_chart.hbs'">Visualize</button>
+       <br><br>
+    <div class="Chart">
+  <canvas id="myChart"></canvas>
+</div>
+<script>
+    data=[ {{first}},{{second}},{{third}},{{fourth}},{{fifth}}]//data displayed in chart
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'pie', //type of chart we need
+    data: {
+        labels: ['0-20', '20-40', '40-60', '60-80', '80-100'],
+        datasets: [{
+            label: 'Number of students',
+            data:data ,
+            backgroundColor: [
+                'rgba(201, 203, 207)',
+                'rgba(54, 162, 235)',
+                'rgba(255, 206, 86)',
+                'rgba(255, 99, 132)',
+                'rgba(153, 102, 255)'
+            ]
+
+        }]
+    }
+});
+</script>
+</body>
+</html>

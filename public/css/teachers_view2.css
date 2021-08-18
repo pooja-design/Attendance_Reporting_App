@@ -1,0 +1,47 @@
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://pocket-image-cache.com//filters:format(jpg):extract_focal()/https%3A%2F%2Fmiro.medium.com%2Fmax%2F9184%2F0*s9oMkOwISmMrJXrC');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+   h1{
+      color:white;
+      font-family:'Brush Script MT', cursive;
+  }
+.column {
+float: left;
+}
+
+.left {
+    margin-left: 30%;
+width: 15%;
+opacity:0.8;
+}
+
+
+.right {
+width: 25%;
+opacity:0.8;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.button {
+  background-color: #7268df; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
+.button:hover{
+   -webkit-box-shadow: 0 4px 16px rgba(63, 182, 230, 0.75);
+  -moz-box-shadow: 0 4px 16px rgba(112, 199, 233, 0.75);
+  box-shadow: 0 4px 16px rgba(110, 171, 241, 0.75);
+  }

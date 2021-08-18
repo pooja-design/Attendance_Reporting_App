@@ -1,0 +1,13 @@
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://wwworks.com/wp-content/uploads/2016/07/WWWorks_Password_Security.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+   h1{
+    color:white;
+    font-family:'Brush Script MT', cursive;
+}
+.teachers_form{
+    margin-left:550px;
+}

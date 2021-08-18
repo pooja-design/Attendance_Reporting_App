@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/teachers_page.css">
+    <title>Attendance</title>
+</head>
+<body>
+  {{>navbar}}
+      <center><h1 style="font-size: 50px;">Attendance Report  </h1>
+       <h2 style="color: rgb(157, 243, 20);"><b>Attendance matters, Each Day, Every Day!</h2>
+       {{#if message}}
+       <h4 style="color:rgb(194, 241, 243)">Attendance uploaded successfully
+       </h4>
+      {{/if}}
+    </center>
+<figure id="fig1">
+    <img  src="https://media.istockphoto.com/vectors/attendance-concept-businessman-holding-checklist-vector-flat-design-vector-id1129487604?k=6&m=1129487604&s=612x612&w=0&h=dl2Iz_6dAkVTYRKpWUAhc1hVmEGs_Ea1vivVyla_CME=" class="img-fill" >
+    <figcaption>Upload</figcaption>
+</figure>
+
+<a href="/teachers_view.hbs">
+<figure id="fig2">
+    <img src="https://image.freepik.com/free-vector/eyeball-icon-image_24911-22723.jpg" class="img-fill">
+    <figcaption>View</figcaption>
+</figure></a>
+
+
+        <input type="button" value="Standard file to be uploaded" onClick="window.location.href='/data.xlsx'" class="button" style="margin-left:40%;margin-top:15px;">
+        <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+      <form action="/upload" enctype="multipart/form-data" class="form" method="POST" >
+        <br><center><input type="file" placeholder="name" name="uploadfile" ><br>
+        <input type="submit" value="Upload" class="button"/></center>
+      </form>
+    </div>
+    <script>
+     let fig1=document.getElementById("fig1");
+     fig1.addEventListener('click',()=>{
+         let data=document.getElementById('id01');
+         data.style.display='block';
+     });
+     var modal = document.getElementById('id01');
+     window.onclick = function(event) {
+        if (event.target == modal) {
+             modal.style.display = "none";
+     }
+        }
+    </script>
+</body>
+</html>

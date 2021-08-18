@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+   <link rel="stylesheet" href="css/pass.css">
+</head>
+<body>
+   {{>navbar}}
+<center>
+
+        <h1 style="font-size: 50px;">Attendance Report  </h1>
+        <h2 style="color: rgb(157, 243, 20);"><b>Attendance matters, Each Day, Every Day!</b></h2>
+        {{#if message}}
+      <h2 style="color:rgb(142, 227, 238)">{{message}}</h2>
+  {{/if}}
+  {{#if message1}}
+      <h2 style="color:rgb(235, 17, 17)">{{message1}}</h2>
+  {{/if}}
+        <br><br>
+        <form action="/change" class="form" method="POST" >
+               <label for="stuname"><b><h3 style="color :rgb(224, 48, 101); font-size:30px;"> Username :</h3> </b></label>
+                <input type="text" id="ID" placeholder="Enter Username" name="stuname" required>
+                <br><br>
+                <label for="oldpsw"><b><h3 style="color :rgb(224, 48, 101); font-size:30px;"> Old Password : </h3></b></label>
+                <input type="password"  placeholder="Enter old password" name="oldpsw" required>
+                <br><br>
+                <label for="newpassword"><b><h3 style="color :rgb(224, 48, 101); font-size:30px;"> New Password : </h3></b></label>
+                <input type="password" placeholder="Enter new Password" name="newpassword" required>
+                  <br><br>
+                <button type="submit" id="change_student"> <h3 style="color :rgb(81, 90, 216); font-size:40px;">Submit</h3> </button>
+              </form>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,89 @@
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://au.res.keymedia.com/files/image/iStock-classroom-girls-students-school.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+   h1{
+       color:white;
+       font-family:'Brush Script MT', cursive;
+   }
+   #img1{
+    height:15cm;
+    width:15cm;
+    padding: 100px;
+   }
+   #img2{
+    height:13cm;
+    width:13cm;
+    padding:100px;
+   }
+   div.gallery {
+        height:400px;
+        width:300px;
+        margin-top:1cm;
+        margin-left:5cm;
+        }
+
+#gal2{
+margin-left: 16cm;
+}
+div.gallery:hover {
+border: 1px solid #ccc;
+box-shadow: 5cm,5cm;
+
+}
+
+div.gallery img {
+width: 100%;
+height: auto;
+border:none;
+margin-left: 20 cm;
+}
+
+div.desc {
+padding: 15px;
+text-align: center;
+font-size: 30px;
+color:white
+}
+
+.responsive {
+padding: 0 6px;
+float: left;
+width: 24.99999%;
+}
+.responsive2 {
+padding: 0 7px;
+float: left;
+width: 24.99999%;
+}
+
+#image{
+width:5cm;
+height:5cm;
+}
+.container {
+padding: 16px;
+}
+input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+#Login_teacher,#Login_student {
+background-color:royalblue;
+color: white;
+font-size: 25px;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+button:hover{
+opacity:0.8;
+}

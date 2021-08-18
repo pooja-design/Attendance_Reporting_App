@@ -1,0 +1,104 @@
+h1{
+    color:rgb(39, 38, 38);
+    font-family:'Brush Script MT', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.cdc.gov/epilepsy/images/communications/features/epilepsy-in-children-teens-walking.jpg');
+background-position:center;
+background-repeat:repeat;
+margin:0;
+overflow:hidden;
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment: fixed;
+}
+h1{
+    color:white;
+    font-family:'Brush Script MT', cursive;
+}
+
+figure {
+display:inline-block;
+height:350px;
+width:350px;
+overflow:hidden;
+position:relative;
+border:10px solid white;
+border-bottom:none;
+
+}
+#fig1{
+ margin-left: 250px;
+}
+#fig2{
+ margin-top: 75px;
+ margin-left: 300px;
+}
+img{
+ height:250px;
+ width:250px;
+}
+figure:hover{
+-webkit-box-shadow: 0 4px 16px rgba(233, 204, 204, 0.75);
+-moz-box-shadow: 0 4px 16px rgba(235, 217, 217, 0.75);
+box-shadow: 0 4px 16px rgba(221, 212, 212, 0.75);
+}
+figcaption{
+position:absolute;
+bottom:0;
+background:white;
+max-width:400px;
+min-width:300px;
+width:100%;
+height:40px;
+line-height:40px;
+text-align:center;
+font-family:sans-serif;
+font-weight: bold;
+font-size:22px;
+}
+
+.img-fill {
+ min-height: 100%;
+ min-width: 100%;
+ display: block;
+ position: relative;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ /* transform: translate(-50%, -50%); */
+}
+
+@media screen and (max-width: 480px) {
+figure {
+ width: 500px;
+ height: 500px;
+ margin: 10px 20px;
+ }
+}
+button,input,select,textarea,optgroup{
+ font:inherit;
+ margin-bottom: 25px;
+}
+h3{
+ font-size: 35px;
+ font-weight: bold;
+}
+.button {
+background-color: #06032b; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+.button:hover{
+ -webkit-box-shadow: 0 4px 16px rgba(63, 182, 230, 0.75);
+-moz-box-shadow: 0 4px 16px rgba(112, 199, 233, 0.75);
+box-shadow: 0 4px 16px rgba(110, 171, 241, 0.75);
+}

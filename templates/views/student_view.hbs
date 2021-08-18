@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    {{>header}}
+    <title>Attendance</title>
+   <link rel="stylesheet" href="css/student_page.css">
+   <style>
+       .Chart{
+            margin-left:450px;
+            width:650px;
+            background-color: black;
+       }
+   </style>
+</head>
+<body>
+   <nav class="navbar navbar-dark bg-dark" style="height:50px;" >
+    <form class="container-fluid justify-content-start">
+      <button class="btn btn-outline-success me-2" type="button" style="width:49% ;color:white;font-size:15px;" onclick="window.location.href='home.hbs'">Home</button>&nbsp;
+      <button class="btn btn-outline-success me-2" type="button"style="width:49%;color:white;font-size:15px;" onclick="window.location.href='login.hbs'" >Logout</button>
+    </form>
+  </nav>
+     <center>
+        <h1 style="font-size: 50px;">Attendance Report  </h1>
+        <h2 style="color: rgb(157, 243, 20);"><b>Attendance matters, Each Day, Every Day!</b></h2>
+        <br><br>
+     </center>
+
+
+    <table class="table">
+  <thead>
+    <tr>
+     <th scope="col" style="color: aqua;" >Subject</Sl></th>
+      <th scope="col" style="color: aqua;">Total classes</th>
+      <th scope="col" style="color: aqua;">Classes present</th>
+       <th scope="col" style="color: aqua;">Percentage</th>
+    </tr>
+  </thead>
+
+  
+    <tbody>
+      {{#each obj}}
+    <tr>
+       <td style="color: burlywood;">{{this.Subject}}</td>
+       <td style="color: lightcoral;">{{this.Total}}</td>
+      <td style="color: lightcoral;">{{this.Attended}}</td>
+      <td style="color: violet;">{{this.Percentage}}</td>
+    </tr>
+  {{/each}}
+   </tbody>
+</table>
+
+<div class="Chart">
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<script>
+
+var xValues = ["","Bd","CNS","SE"];//x- axis values
+var arr = [0] ;
+{{#each obj}}
+var temp = {{this.Percentage}};
+arr.push(temp) ;
+ {{/each}}
+var yValues = arr;// y-axis values
+
+var barColors = [ "","green","blue","red"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales:{
+      yValues:[{
+        ticks:{
+          beginAtZero:true}
+      }]
+    },
+    title: {
+      display: true,
+      text: "Attendance Reports"
+    }
+  }
+});
+</script>
+</center>
+</body>
+</html>

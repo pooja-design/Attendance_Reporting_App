@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <title>Attendance</title>
+    <link rel="stylesheet" href="css/teachers_view2.css">
+</head>
+
+<body>
+  <center>
+    {{>navbar2}}
+  </center>
+    <center><h1 style="font-size: 50px;">Attendance Report  </h1>
+       <h2 style="color: rgb(113, 175, 32);"><b>Attendance matters, Each Day, Every Day!</h2>
+       <h3 style="color:beige">{{name}} Teacher, Namaste!</h3><br></center><center>
+       <button type="button" class="btn btn-primary" onclick="window.location.href='teachers_view.hbs'">All Students Attendance</button>
+       <button type="button" class="btn btn-secondary" onclick="window.location.href='teachers_view2.hbs'">Students Whose Attendance Less than 75%</button>
+       <button type="button" class="btn btn-success" onclick="window.location.href='teachers_chart.hbs'">Visualize</button>
+       <br><br>
+    <div class="row" id="example">
+        <div class="column left" style="background-color:#FFB695;padding:10px;border: 2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>USN</h5>
+            <hr>
+            {{#each usn}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        <div class="column right" style="background-color:#eedfcb;padding:10px;border:  2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>Attendance in %</h5>
+            <hr>
+            {{#each result}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        </div>
+    <br><br>
+    <input type="button" value="Download"  class="button"id= "download" style="width:200px;color:black;font-weight:900"></center>
+</table>
+     <script>
+          let download=document.getElementById("download");
+         download.addEventListener('click',()=>{
+             print();
+         })
+     </script>
+</body>
+</html>

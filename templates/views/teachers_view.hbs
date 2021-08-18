@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{!-- importing partials in handlebars --}}
+    {{>header}}
+    <title>Attendance</title>
+    <link rel="stylesheet" href="css/teachers_view.css">
+</head>
+
+<body>
+  {{!-- importing partials in handlebars --}}
+    {{>navbar2}}
+    <center><h1 style="font-size: 50px;">Attendance Report  </h1>
+       <h2 style="color: rgb(113, 175, 32);"><b>Attendance matters, Each Day, Every Day!</h2>
+       <h3 style="color:beige">{{name}} Teacher, Namaste!</h3><br>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='teachers_view.hbs'">All Students Attendance</button>
+       <button type="button" class="btn btn-secondary" onclick="window.location.href='teachers_view2.hbs'">Students Whose Attendance Less than 75%</button>
+       <button type="button" class="btn btn-success" onclick="window.location.href='teachers_chart.hbs'">Visualize</button>
+       <br><br>
+    <div class="row" id="example">
+        <div class="column left1" style="background-color:#8280f1;padding:10px;border: 2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>Sl.No</h5>
+            <hr>
+            {{!-- for each loop to traverse the object that was rendered to this page. --}}
+            {{#each count}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        <div class="column left" style="background-color:#FFB695;padding:10px;border: 2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>USN</h5>
+            <hr>
+            {{#each obj}}
+            <p>{{this._id}}</p>
+            {{/each}}
+        </div>
+        <div class="column middle" style="background-color:#96D1CD;padding:10px;border: 2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>NAME</h5>
+            <hr>
+            {{#each obj}}
+            <p>{{this.name}}</p>
+            {{/each}}
+        </div>
+        <div class="column right2" style="background-color:#daf170;padding:10px;border: 2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>Total</h5>
+            <hr>
+            {{#each attendance}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        <div class="column right3" style="background-color:#f17fd5;padding:10px;border:  2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>Present</h5>
+            <hr>
+            {{#each present}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        <div class="column right" style="background-color:#eedfcb;padding:10px;border:  2px solid rgb(10, 9, 9);
+          padding: 8px;">
+            <h5>Attendance in %</h5>
+            <hr>
+            {{#each result}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        </div>
+    <br><br>
+    <input type="button" value="Download"  class="button"id= "download" style="width:200px;color:black;font-weight:900">
+</table>
+     </center>
+     <script>
+          let download=document.getElementById("download");
+         download.addEventListener('click',()=>{
+             print();
+         })
+     </script>
+</body>
+</html>

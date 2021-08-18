@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>header}}
+    <link rel="stylesheet" href="css/login.css">
+    <title>LOGIN</title>
+</head>
+<body>
+  {{>navbar}}
+  {{#if message}}
+  <center><h2 style="color: rgb(241, 31, 31)">{{message}}</h2></center>
+  {{/if}}
+     <center><h1 style="font-size: 50px;">Attendance Report  </h1>
+      <h2 style="color: rgb(157, 243, 20);"><b>Attendance matters, Each Day, Every Day!</b></h2>
+
+    </center>
+        <br><br>
+<center>
+<div class="responsive">
+    <div class="gallery" id="gal1">
+        <img src="https://www.pngkey.com/png/full/12-123249_teacher-teacher-login.png" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight" alt="" width="600" height="400">
+      <div class="desc">Teacher's Login</div>
+    </div>
+  </div>
+
+  <div class="responsive2">
+    <div class="gallery" id="gal2">
+        <img src="https://dmsf.ph/student-portal/assets/img/logo-2.png" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"alt="" width="600" height="400">
+      <div class="desc">Students Login</div>
+    </div>
+  </div>
+</center>
+
+<!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="button">Toggle right offcanvas</button> -->
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel" style="width:14cm">
+  <div class="offcanvas-header">
+    <h2 id="offcanvasRightLabel">Teacher's Login</h2>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <br><br>
+    <center>
+        <img src="https://www.pngkey.com/png/full/12-123249_teacher-teacher-login.png" alt="" id="image">
+    </center>
+    <div class="container">
+      <form action="/teacher" class="form" method="POST" >
+        <br><label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username"   name="username" required>
+          <br><br>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password"   name="password" required>
+            <br><br>
+            
+          <button type="submit" id="Login_teacher"  >Login</button>
+          <center><a href="/teachers_pass.hbs" >Change Password</a></center>
+          
+        </form><br>
+        <br><br>
+    </div>
+      </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width:14cm">
+    <div class="offcanvas-header">
+      <h2 id="offcanvasRightLabel">Student's Login</h2>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="offcanvas-body">
+            <br><br>
+            <center>
+                <img src="https://dmsf.ph/student-portal/assets/img/logo-2.png" alt="" id="image">
+            </center>
+            <div class="container">
+              <form action="/student" class="form" method="POST" >
+               <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <br><br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                  <br><br>
+                <button type="submit" id="Login_student"> Login</button>
+                <center><a href="/pass.hbs" >Change Password</a></center>
+                
+              </form>
+                <br><br>
+            </div>
+              </div>
+    </div>
+  </div>
+</body>
+</html>

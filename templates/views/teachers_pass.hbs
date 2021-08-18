@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+   <link rel="stylesheet" href="css/pass.css">
+</head>
+<body>
+    {{>navbar}}
+<center>
+
+        <h1 style="font-size: 50px;">Attendance Report  </h1>
+        <h2 style="color: rgb(157, 243, 20);"><b>Attendance matters, Each Day, Every Day!</b></h2>
+        {{#if message}}
+      <h2 style="color:rgb(142, 227, 238)">{{message}}</h2>
+  {{/if}}
+  {{#if message1}}
+      <h2 style="color:rgb(235, 17, 17)">{{message1}}</h2>
+  {{/if}}
+  </center>
+        <br><br>
+ <form action="/teachers_change" class="teachers_form" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1" style="color:white">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="stuname" placeholder="Enter Username" style="width:350px;">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="color:white">Old Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder=" Old Password" name="oldpsw"style="width:350px;">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="color:white">New Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder=" New Password" name="newpassword"style="width:350px;">
+  </div>
+  <br><br>
+  <button type="submit" class="btn btn-primary" style="margin-left:120px;">Submit</button>
+
+</form>
+
+
+</body>
+</html>
