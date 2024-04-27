@@ -10,3 +10,9 @@ The teachers can either ***view*** the attendance of the class or ***upload the 
 The Format/template of excel file can be downloaded prior to taking attendance and then the same file can be uploaded.\
 The students can view the attendance of the enrolled subjects after logging in with valid credentials.\
 There is also an option provided for both teachers and students to change their login password. **Visualizations like bar chart and pie chart** has been used for providing the user better visualization of their status.
+
+### Built With :
+  * MongoDB: Database
+  * HTML, CSS: Front-end
+  * JS, NodeJS: Framework
+  * Mongoose: Interface to connect to MongoDB
