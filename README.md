@@ -16,3 +16,6 @@ There is also an option provided for both teachers and students to change their 
   * HTML, CSS: Front-end
   * JS, NodeJS: Framework
   * Mongoose: Interface to connect to MongoDB
+
+## Methodology:
+![image](https://github.com/pooja-design/Attendance_Reporting_App/assets/61023924/7477148e-bdf9-487c-8b08-044c58a4da95)
