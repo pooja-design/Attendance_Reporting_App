@@ -1,4 +1,4 @@
-# Attendance_Reporting_App
+# Attendance Reporting App
 
 Attendance status report is an application that can be used to track the attendance status of students belonging to an institution.\
 It provides two interfaces: 
