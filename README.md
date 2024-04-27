@@ -49,7 +49,6 @@ There is also an option provided for both teachers and students to change their 
  ![image](https://github.com/pooja-design/Attendance_Reporting_App/assets/61023924/509f77ac-33bc-4cc6-951e-14cd99a83b77)
 
 * Student View After Login:
- ![image](https://github.com/pooja-design/Attendance_Reporting_App/assets/61023924/46a1a776-d677-418c-9347-4496a1842d8a)
  ![image](https://github.com/pooja-design/Attendance_Reporting_App/assets/61023924/242b007d-6362-4f21-ad90-79e0b79b4e32)
 
 
